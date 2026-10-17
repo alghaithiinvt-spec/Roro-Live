@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق بث مباشر</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #0f0f0f;
+            font-family: Tahoma, sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .phone-container {
+            width: 100%;
+            max-width: 400px;
+            height: 100%;
+            max-height: 800px;
+            background: #18181b;
+            border-radius: 30px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .header {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0,0,0,0.3);
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ec4899;
+        }
+        .video-area {
+            flex: 1;
+            background: linear-gradient(135deg, #27272a, #09090b);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .live-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #ef4444;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .chat-box {
+            position: absolute;
+            bottom: 70px;
+            left: 15px;
+            right: 15px;
+            max-height: 150px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .chat-message {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            width: fit-content;
+        }
+        .footer-nav {
+            height: 60px;
+            background: #121214;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid #27272a;
+        }
+        .nav-item {
+            font-size: 12px;
+            color: #a1a1aa;
+            text-align: center;
+        }
+        .nav-item.active {
+            color: #ec4899;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="phone-container">
+        <!-- الهيدر العلوي -->
+        <div class="header">
+            <span>🔔</span>
+            <div class="logo">رورو</div>
+            <span>🔍</span>
+        </div>
+
+        <!-- منطقة البث المباشر -->
+        <div class="video-area">
+            <div class="live-badge">LIVE 🔴</div>
+            
+            <!-- التعليقات الوهمية على البث -->
+            <div class="chat-box">
+                <div class="chat-message"><b>أحمد:</b> جميلة جداً ❤️</div>
+                <div class="chat-message"><b>سعيد:</b> ممكن نتعرف؟ ❤️</div>
+                <div class="chat-message"><b>خالد:</b> ما شاء الله ❤️</div>
+            </div>
+        </div>
+
+        <!-- الشريط السفلي للتنقل -->
+        <div class="footer-nav">
+            <div class="nav-item active">الرئيسية</div>
+            <div class="nav-item">اكتشف</div>
+            <div class="nav-item" style="color: #ec4899; font-weight: bold;">➕ بث</div>
+            <div class="nav-item">الرسائل</div>
+            <div class="nav-item">الملف الشخصي</div>
+        </div>
+    </div>
+
+</body>
+</html>
